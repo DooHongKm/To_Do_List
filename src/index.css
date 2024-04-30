@@ -1,11 +1,11 @@
 body {
-  background-color: rgb(192, 236, 193);
+  background-color: gray;
 }
 
 .card-container {
   padding: 5px;
   color: white;
-  background-color: rgb(204, 225, 183);
+  background-color: black;
   border: 1px solid white;
   display: flex;
 }
@@ -13,6 +13,7 @@ body {
 .card-container h4 {
   align-content: center;
   width: 85%;
+  padding-left: 10px
 }
 
 .card-container p {
@@ -22,7 +23,7 @@ body {
 
 .card-btn-container {
   width: 5%;
-  padding: 3px;
+  padding: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
