@@ -1,9 +1,11 @@
 import React from 'react'
 
 export default function TodoCard({ title, time }) {
+
   const h = time[0] < 10 ? '0' + time[0] : time[0]
   const m = time[1] < 10 ? '0' + time[1] : time[1]
   const s = time[2] < 10 ? '0' + time[2] : time[2]
+
   return (
     <div className='card-container'>
       <h4>{title}</h4>
@@ -14,4 +16,5 @@ export default function TodoCard({ title, time }) {
       </div>
     </div>
   )
+  
 }

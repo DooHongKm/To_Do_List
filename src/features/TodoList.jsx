@@ -1,17 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TodoCard from '../components/TodoCard'
-import {data} from '../TodoData';
 
-export default function TodoList() {
+export default function TodoList({ tList }) {
+  
   return (
     <div className='list-container'>
-      {data.todo.map((d) =>
+      {tList.map((d) =>
         <TodoCard
-          key={d.id}
           title={d.title}
           time={d.time}
         />
       )}
     </div>
   )
+
 }
