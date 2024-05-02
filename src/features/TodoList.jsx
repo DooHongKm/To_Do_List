@@ -8,6 +8,7 @@ export default function TodoList({ tList, mod, rem }) {
       {tList.map((d) =>
         <TodoCard
           key={d.id}
+          id={d.id}
           title={d.title}
           time={d.time}
           mod={mod}

@@ -1,19 +1,17 @@
 import React from 'react'
 
-export default function TodoCard({ title, time, mod, rem }) {
-
-
+export default function TodoCard({ id, title, time, mod, rem }) {
 
   const h = time[0] < 10 ? '0' + time[0] : time[0]
   const m = time[1] < 10 ? '0' + time[1] : time[1]
   const s = time[2] < 10 ? '0' + time[2] : time[2]
 
   const modTask = () => {
-    mod(title, "new Text")
+    mod(id, "new Text")
   }
 
   const remTask = () => {
-    rem(title)
+    rem(id)
   }
 
   return (
