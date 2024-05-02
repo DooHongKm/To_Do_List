@@ -1,27 +1,22 @@
-import React from 'react'
-import { useState } from 'react'
+import React, {useState} from 'react'
 import TodoList from '../features/TodoList'
 
-export default function MainPage() {
+export default function MainPage({ tList, add, mod, rem }) {
 
   const [task, setTask] = useState('')
-  const [tList, setTList] = useState([]) 
 
   const addTask = () => {
-    const cTime = new Date()
     setTask('')
-    setTList([
-      ...tList,
-      {
-        title: task,
-        time: [cTime.getHours(), cTime.getMinutes(), cTime.getSeconds()]
-      }
-    ])
+    add(task)
   }
 
   return (
     <div className='page-container'>
-      <TodoList tList={tList} />
+      <TodoList
+        tList={tList}
+        mod={mod}
+        rem={rem}
+      />
       <div className='page-input-container'>
         <input
           type='text'
